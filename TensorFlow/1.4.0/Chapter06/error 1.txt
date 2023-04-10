@@ -1,0 +1,84 @@
+Python 3.6.5 |Anaconda, Inc.| (default, Mar 29 2018, 13:32:41) [MSC v.1900 64 bit (AMD64)]
+Type "copyright", "credits" or "license" for more information.
+
+IPython 6.4.0 -- An enhanced Interactive Python.
+
+runfile('D:/TensorFlowCode/201806github/1.4.0/Chapter06/LeNet5_train_pic.py', wdir='D:/TensorFlowCode/201806github/1.4.0/Chapter06')
+105 training examples, 20 validation examples and 15 testing examples.
+WARNING:tensorflow:From D:\Anacanda\Install\lib\site-packages\tensorflow\python\framework\op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+Traceback (most recent call last):
+
+  File "<ipython-input-1-69d54a449aaa>", line 1, in <module>
+    runfile('D:/TensorFlowCode/201806github/1.4.0/Chapter06/LeNet5_train_pic.py', wdir='D:/TensorFlowCode/201806github/1.4.0/Chapter06')
+
+  File "D:\Anacanda\Install\lib\site-packages\spyder\utils\site\sitecustomize.py", line 705, in runfile
+    execfile(filename, namespace)
+
+  File "D:\Anacanda\Install\lib\site-packages\spyder\utils\site\sitecustomize.py", line 102, in execfile
+    exec(compile(f.read(), filename, 'exec'), namespace)
+
+  File "D:/TensorFlowCode/201806github/1.4.0/Chapter06/LeNet5_train_pic.py", line 145, in <module>
+    main()
+
+  File "D:/TensorFlowCode/201806github/1.4.0/Chapter06/LeNet5_train_pic.py", line 64, in main
+    output = LeNet5_infernece_pic.inference(images,False,regularizer) #x改为images, y改为output
+
+  File "D:\TensorFlowCode\201806github\1.4.0\Chapter06\LeNet5_infernece_pic.py", line 27, in inference
+    conv1 = tf.nn.conv2d(input_tensor, conv1_weights, strides=[1, 1, 1, 1], padding='SAME')
+
+  File "D:\Anacanda\Install\lib\site-packages\tensorflow\python\ops\gen_nn_ops.py", line 1112, in conv2d
+    data_format=data_format, dilations=dilations, name=name)
+
+  File "D:\Anacanda\Install\lib\site-packages\tensorflow\python\framework\op_def_library.py", line 610, in _apply_op_helper
+    param_name=input_name)
+
+  File "D:\Anacanda\Install\lib\site-packages\tensorflow\python\framework\op_def_library.py", line 60, in _SatisfiesTypeConstraint
+    ", ".join(dtypes.as_dtype(x).name for x in allowed_list)))
+
+TypeError: Value passed to parameter 'input' has DataType int64 not in list of allowed values: float16, bfloat16, float32, float64
+
+
+
+
+Python 3.6.5 |Anaconda, Inc.| (default, Mar 29 2018, 13:32:41) [MSC v.1900 64 bit (AMD64)]
+Type "copyright", "credits" or "license" for more information.
+
+IPython 6.4.0 -- An enhanced Interactive Python.
+
+runfile('D:/TensorFlowCode/201806github/1.4.0/Chapter06/LeNet5_train_pic.py', wdir='D:/TensorFlowCode/201806github/1.4.0/Chapter06')
+105 training examples, 20 validation examples and 15 testing examples.
+WARNING:tensorflow:From D:\Anacanda\Install\lib\site-packages\tensorflow\python\framework\op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+Traceback (most recent call last):
+
+  File "<ipython-input-1-69d54a449aaa>", line 1, in <module>
+    runfile('D:/TensorFlowCode/201806github/1.4.0/Chapter06/LeNet5_train_pic.py', wdir='D:/TensorFlowCode/201806github/1.4.0/Chapter06')
+
+  File "D:\Anacanda\Install\lib\site-packages\spyder\utils\site\sitecustomize.py", line 705, in runfile
+    execfile(filename, namespace)
+
+  File "D:\Anacanda\Install\lib\site-packages\spyder\utils\site\sitecustomize.py", line 102, in execfile
+    exec(compile(f.read(), filename, 'exec'), namespace)
+
+  File "D:/TensorFlowCode/201806github/1.4.0/Chapter06/LeNet5_train_pic.py", line 145, in <module>
+    main()
+
+  File "D:/TensorFlowCode/201806github/1.4.0/Chapter06/LeNet5_train_pic.py", line 70, in main
+    cross_entropy = tf.nn.sparse_softmax_cross_entropy_with_logits(logits=tf.one_hot(output,CLASS,1,0), labels=tf.argmax(tf.one_hot(labels,CLASS,1,0), 1))
+
+  File "D:\Anacanda\Install\lib\site-packages\tensorflow\python\ops\array_ops.py", line 3018, in one_hot
+    name)
+
+  File "D:\Anacanda\Install\lib\site-packages\tensorflow\python\ops\gen_array_ops.py", line 6251, in one_hot
+    off_value=off_value, axis=axis, name=name)
+
+  File "D:\Anacanda\Install\lib\site-packages\tensorflow\python\framework\op_def_library.py", line 610, in _apply_op_helper
+    param_name=input_name)
+
+  File "D:\Anacanda\Install\lib\site-packages\tensorflow\python\framework\op_def_library.py", line 60, in _SatisfiesTypeConstraint
+    ", ".join(dtypes.as_dtype(x).name for x in allowed_list)))
+
+TypeError: Value passed to parameter 'indices' has DataType float32 not in list of allowed values: uint8, int32, int64
